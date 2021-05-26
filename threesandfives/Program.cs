@@ -65,8 +65,10 @@ namespace threesandfives
             var x = (n * c) + (3 * k);
             var y = (m * c) - (5 * k);
             if (x * y < 0) return "-1";
+            
+            var ones = 1.0/9.0;
 
-            var res = new string('5', 3 * (int)y) + new string('3', 5 * (int)x);// love me some casts
+            var res = (5*Math.Floor((ones * Math.Pow(10,3*(int)y)) * Math.Pow(10,5*(int)x)) + (3*Math.Floor((ones * Math.Pow(10,5*(int)x)));// love me some casts
             return res;
         }
 
